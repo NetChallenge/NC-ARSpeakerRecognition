@@ -8,7 +8,7 @@ def run(params):
 
     save_path = "./trained_model.ckpt"
 
-    saver = tf.train.Saver()
+    saver = tf.train.Saver
     saver.restore(sess, save_path)
 
 

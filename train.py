@@ -20,7 +20,7 @@ def next_batch(num, data, labels):
 
 def run(params):
 
-    files = ["./person01.wav", './person02.wav', './person03.wav']
+    files = ["./person01.aac", './person02.aac', './person03.aac']
 
     save_path = "./trained_model.ckpt"
 
@@ -71,6 +71,6 @@ def run(params):
     print("Prediction: ", sess.run(tf.argmax(dnn.predict(x_test=data_test['X'][r:r + 1]), 1)))
 
     # 학습 모델 저장
-    saver = tf.train.Saver()
+    saver = tf.train.Saver
     saver.save(sess, save_path=save_path)
 
